@@ -52,7 +52,7 @@ else:
     # driver.get('https://www.linkedin.com/')
     print("This login is using credentials")
     username_field = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, 'session_key')))
-    username_field.send_keys('bhavyasrivastava012@gmail.com')
+    username_field.send_keys('username')
     time.sleep(4)
     
     password_field = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, 'session_password')))

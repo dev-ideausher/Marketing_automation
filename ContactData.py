@@ -38,10 +38,10 @@ if os.path.exists(apollo_cookies):
     load_cookies(driver, apollo_cookies)
 else:
     username_field = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, 'o7-input')))
-    username_field.send_keys('bhavya.srivastava@ideausher.com')
+    username_field.send_keys('username')
     time.sleep(4)
     password_field = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, 'current-password')))
-    password_field.send_keys('khushibhavya@007')
+    password_field.send_keys('password')
     password_field.send_keys(Keys.RETURN)
     print('You are logged in Apollo!')
 
@@ -59,7 +59,7 @@ if os.path.exists(Linkedin_cookies):
 else: 
 # Wait for the user to log in manually or automate the login process
     username_field = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, 'session_key')))
-    username_field.send_keys('bhavyasrivastava012@gmail.com')
+    username_field.send_keys('username')
 
     time.sleep(4)
 

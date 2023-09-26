@@ -3,7 +3,7 @@ import json
 import pandas as pd
 
 # user key
-user_key = "bd327e31a3b0a4148ccdc00fdeb89969"
+user_key = "your_api_key"
 
 
 query={

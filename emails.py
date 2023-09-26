@@ -16,8 +16,8 @@ df = pd.read_csv(csv_file)
 
 smtp_server = 'smtp.gmail.com'
 smtp_port = 587  # SMTP port (e.g., 587 for TLS, 465 for SSL)
-smtp_username = 'bhavyasrivastava012@gmail.com'  
-smtp_password = 'hfbb nnsh fmlg fafq'  
+smtp_username = 'username'  
+smtp_password = 'pass'  
 
 #Function to send  the first mail
 def sendmail_first(to_email,name):

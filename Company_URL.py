@@ -25,14 +25,6 @@ query={
         },
         {
             "type": "predicate",
-            "field_id": "categories",
-            "operator_id": "includes",
-            "values": [
-                "b8ca872c-983d-f8dd-3639-2660511203ef"# Category 1 ID
-            ]
-        },
-        {
-            "type": "predicate",
             "field_id": "facet_ids",
             "operator_id": "includes",
             "values": [

@@ -13,7 +13,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import re
 import openai
 import datetime
-import sys
+# import sys
 # from API_KEY import api_sec
 
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
@@ -138,7 +138,7 @@ def sendmail_third(to_email,name,company_name,short_desc):
 
 
 #Function to check for response
-def check_response(name,email_search):
+def check_response(email_search):
    response_list = []  
    imap_server="imap.gmail.com"
    mail = imaplib.IMAP4_SSL(imap_server)
@@ -251,12 +251,12 @@ def main():
          mark_email_as_sent(to_email, "First")
       else:
         if response is None:
-         response = check_response(name, to_email)
+         response = check_response(to_email)
         #  print("response check 1")
          if response:
           update_response_to_sheet(to_email,response)
           # print("response block")
-          sys.exit(0)
+          break
          else:
           if not email_already_sent(to_email, "Second"):
             #  for record in worksheet.get_all_records():
@@ -268,11 +268,11 @@ def main():
                  print("Not enough time has passed to send the second email")
           else:
             if response is None:
-             response = check_response(name, to_email)
+             response = check_response(to_email)
              print("response check 2")
              if response:
               update_response_to_sheet(to_email,response)
-              sys.exit(0)
+              break
              else:
               if not email_already_sent(to_email, "Third"):
               #  for row in worksheet.get_all_records():
